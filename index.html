@@ -1,0 +1,66 @@
+<html>
+
+<head>
+
+    <title>Proyecto1LM_Alba</title> 
+    <style>
+        #portaFoto {
+            width: 50vw;
+            height: 50vh;
+            display: block;
+        }
+
+        #laFoto {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        @media screen and (orientation:landscape) {
+            #portaFoto {
+                max-width: 1200px;
+                max-height: 800px;
+            }
+        }
+
+        @media screen and (orientation:portrait) {
+            #portaFoto {
+                max-width: 600px;
+                max-height: 900px;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+<picture id="portaFoto">
+    <source media="(orientation: landscape) and (min-width: 1920px)" srcset="./foto3.heic"
+            type="image/heic">
+        <source media="(orientation: landscape) and (min-width: 1920px)" srcset="./foto3.webp"
+            type="image/webp">
+        <source media="(orientation: landscape) and (min-width: 1920px)" srcset="./foto3.jpg" type="image/jpeg">
+        <source media="(orientation: portrait) and (min-width:1200px)" srcset="./foto1.heic" type="image/heic">
+        <source media="(orientation: portrait) and (min-width:1200px)" srcset="./foto1.webp" type="image/webp">
+        <source media="(orientation: portrait) and (min-width:1200px)" srcset="./foto1.jpg" type="image/jpg">
+
+        <!-- imágenes MEDIANAS -->
+        <!-- horizontales: mostraremos la grande cuando la pequeña no fuera suficiente, o sea más de 900 de ancho.
+        verticales: el mismo criterio, o sea más de 400 de ancho. -->
+        <source media="(orientation: landscape) and (min-width: 800px)" srcset="./foto4.heic"
+            type="image/heic">
+        <source media="(orientation: landscape) and (min-width: 800px)" srcset="./foto4.webp"
+            type="image/webp">
+        <source media="(orientation: landscape) and (min-width: 800px)" srcset="./foto4.jpg" type="image/jpeg">
+        <source media="(orientation: portrait) and (min-width: 600px)" srcset="./foto2.heic" type="image/heic">
+        <source media="(orientation: portrait) and (min-width: 600px)" srcset="./foto2.webp" type="image/webp">
+        <source media="(orientation: portrait) and (min-width: 600px)" srcset="./foto2.jpg" type="image/jpg">
+
+ 
+
+        <img id="laFoto" alt="Foto de un paisaje" title="Un paisaje conocido" src="./foto1.jpg" />
+</picture>
+</body>
+
+
+</html>
